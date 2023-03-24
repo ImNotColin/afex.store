@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+
+        <title>AFEX | Supplying The Pride</title>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+        <link rel="icon" type="image/x-icon" sizes="32x32" href="image/favicon-32x32.png">
+        <link rel="icon" type="image/x-icon" sizes="16x16" href="image/favicon-16x16.png">
+        <link rel="manifest" href="image/site.webmanifest">
+
+        <meta name="description" content="Purchase all your favorite products here, on the AFEX website!" />
+
+        <style>
+            .video-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 99%;
+            height: 100%; 
+            height: 100%; 
+            overflow: hidden;
+            }
+            .video-container video {
+            /* Make video to at least 100% wide and tall */
+            min-width: 100%; 
+            }
+            .video-container video {
+            /* Make video to at least 100% wide and tall */
+            min-width: 100%; 
+            min-height: 100%; 
+
+            /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+            width: auto;
+            height: auto;
+
+            /* Center the video */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            }
+
+            body {
+                margin: 20px auto;
+                font-family: Courier New, Courier, monospace;
+                font-weight: 300;
+            }
+        </style>
+
+        <script>
+
+            // This handles the intro animation
+
+            var opacity = 0;
+            var intervalID = 0;
+
+            function fadeIn() {
+                setInterval(show, 60);
+            }
+
+            function show() {
+                var body = document.getElementById("body");
+                opacity = Number(window.getComputedStyle(body)
+                                .getPropertyValue("opacity"));
+                if (opacity < 1) {
+                    opacity = opacity + 0.1;
+                    body.style.opacity = opacity
+                } else {
+                    clearInterval(intervalID);
+                }
+            }
+            setTimeout(() => {
+            fadeIn()
+            }   , 2400); // Delay before video fades out, making
+
+            setTimeout(() => {
+            const intro = document.getElementById('intro');
+            intro.style.display = 'none';
+            }   , 2400);
+
+        </script>
+    </head>
+
+    <body>
+
+    <!--Plays the video on intro-->
+    <div class="video-container" id="intro">
+        <video autoplay muted>
+            <source src="afexintro.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!--EVERYTHING TO FADE IN GOES HERE-->
+    <div id="body" style="opacity: 0;">
+        TESTING
+    </div>
+
+    </body>
+</html>
