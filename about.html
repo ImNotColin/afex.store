@@ -15,38 +15,34 @@
         <meta name="description" content="Browse all your favorite products here, on the AFEX website!" />
 
         <style>
-            .logo {
-                width: 15%;
-                height: 15%;
-                margin-left: 5%;
-            }
-            .video-container {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                width: 99%;
-                height: 100%; 
-                height: 100%; 
+
+            /* Navigation Bar */
+            .topnav {
+                background-color: #395826;
                 overflow: hidden;
+                padding: 5px;
+                text-align: center;
             }
-            .video-container video {
-                /* Make video to at least 100% wide and tall */
-                min-width: 100%; 
-            }
-            .video-container video {
-                /* Make video to at least 100% wide and tall */
-                min-width: 100%; 
-                min-height: 100%; 
+                .topnav a {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 25px;
+                }
+                    .topnav a:hover {
+                        background-color: #69140e;
+                        color: lightgrey;
+                    }
 
-                /* Setting width & height to auto prevents the browser from stretching or squishing the video */
-                width: auto;
-                height: auto;
-
-                /* Center the video */
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
+            .logo {
+                width: 30%;
+                height: 30%;
+                padding-bottom: 8px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             h1 {
@@ -56,6 +52,39 @@
                 padding-top: 10px;
             }
 
+            h2 {
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+                font-weight: bold;
+            }
+
+            .section {
+                transition: box-shadow .3s;
+                border-radius: 20px;
+                margin-left: 6%;
+                margin-right: 6%;
+                display: flex;
+                flex-direction: row;
+                font-family: sans-serif;
+                background-color: #f2f2f2;
+            }
+                .section:hover {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+
+            p {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: dimgray;
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+
             .image {
                 width: 88%;
                 height: 50%;
@@ -64,6 +93,12 @@
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
+            }
+
+            .thumbnail {
+                width: 20%;
+                height: 20%;
+                padding: 10px;
             }
 
             .parallax {
@@ -80,8 +115,6 @@
             @media (min-width: 500px) {
 
                 body {
-                    margin: 0px auto;
-                    overflow: hidden;
                 }
 
                 .flip-card {
@@ -162,7 +195,6 @@
             @media (max-width: 500px) {
 
                 body {
-                    margin: 0px auto;
                     
                 }
 
@@ -243,128 +275,152 @@
 
         </style>
 
-        <script>
-
-            // This handles the intro animation
-
-            var opacity = 0;
-            var intervalID = 0;
-
-            function fadeIn() {
-                setInterval(show, 60);
-            }
-
-            function show() {
-                var body = document.getElementById("body");
-                opacity = Number(window.getComputedStyle(body)
-                                .getPropertyValue("opacity"));
-                if (opacity < 1) {
-                    opacity = opacity + 0.1;
-                    body.style.opacity = opacity
-                } else {
-                    clearInterval(intervalID);
-                }
-            }
-            setTimeout(() => {
-            fadeIn()
-            }   , 2400); // Delay before video fades out
-
-            setTimeout(() => {
-            const intro = document.getElementById('intro');
-            intro.style.display = 'none';
-            }   , 2400);
-
-        </script>
     </head>
 
     <body>
 
+        <a href="index.html">
+            <img src="media/afex_logo.png" class="logo" />
+        </a>
 
-        <!--Plays the video on intro-->
-        <div class="video-container" id="intro">
-            <video autoplay muted>
-                <source src="media/afexintro.mp4" type="video/mp4">
-            </video>
+        <div class="topnav">
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="locations.html">Our Locations</a>
+            <a href="contact.html">Contact Us/Newsletter</a>
         </div>
 
-        <!--EVERYTHING TO FADE IN GOES HERE-->
-        <div id="body" style="opacity: 0;">
+        <br />
+        <br />
 
-            <img src="media/AFEXbck.png" class="image">
+        <!--Intro-->
+        <section class="section">
+            <div class="content">
 
-            <!--Flip cards-->
-            <div class="wrapper">
+                <h2 style="font-size:40px;">
+                    &nbsp;About Us &nbsp;
 
-                <a href="about.html">
-                <div class="first">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="media/info.png" alt="icon" style="width:120px;height:120px;padding-top:15px;">
-                            </div>
-                            <div class="flip-card-back">
-                                <br />
-                                <h1>About Us</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </a>
+                </h2>
 
-                <a href="products.html">
-                    <div class="second">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="media/cart.png" alt="icon" style="width:150px;height:150px;">
-                                </div>
-                                <div class="flip-card-back">
-                                    <br />
-                                    <h1>Our Products</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                <p style="text-align:center;">
+                    The AFNorth Exchange runs on the work of 5 dedicated officers. All decisions regarding prices,
+                    design changes, meeting plans, workdays, and general management go through them. Without the tireless work of these five,
+                    AFEX would not be as successful as it is today. 
 
-                <a href="locations.html">
-                <div class="third">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="media/map.png" alt="icon" style="width:120px;height:120px;padding-top:15px;">
-                            </div>
-                            <div class="flip-card-back">
-                                <br />
-                                <h1>Our Locations</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </a>
-
-                <a href="contact.html">
-                <div class="fourth">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="media/envelope.png" alt="icon" style="width:150px;height:150px;">
-                            </div>
-                            <div class="flip-card-back">
-                                <br />
-                                <h1>Contact Us</h1>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                </a>
-
-
+                </p>
             </div>
+        </section>
 
+        <div>
+            <br />
         </div>
 
+        <!--Colin-->
+        <section class="section">
+            <img src="media/cs_thumb.png" class="thumbnail" />
+            <div class="content">
+
+                <h1>
+                    &nbsp;President - Colin Scharfenstine &nbsp;
+
+                </h1>
+
+                <p>
+                    Age: 18 <br />
+                    Grade: 12 <br />
+                    Future Plans: Start his own tech company, Excaliber Technologies
+
+                </p>
+            </div>
+        </section>
+
+        <div>
+            <br />
+        </div>
+
+        <!--Caleb-->
+        <section class="section">
+            <img src="media/cm_thumb.png" class="thumbnail" />
+            <div class="content">
+
+                <h1>
+                    &nbsp;Vice President - Caleb Mason &nbsp;
+
+                </h1>
+
+                <p>
+                    Age: 18 <br />
+                    Grade: 12 <br />
+                    Future Plans: Start his own dentistry practice
+                </p>
+            </div>
+        </section>
+
+        <div>
+            <br />
+        </div>
+
+        <!--Kyliee-->
+        <section class="section">
+            <img src="media/kt_thumb.png" class="thumbnail" />
+            <div class="content">
+
+                <h1>
+                    &nbsp;Treasurer - Kyliee Thurston &nbsp;
+
+                </h1>
+
+                <p>
+                    Age: 18 <br />
+                    Grade: 12 <br />
+                    Future Plans: Take over her father's handyman business, Thurston Services
+                </p>
+            </div>
+        </section>
+
+        <div>
+            <br />
+        </div>
+
+        <!--Sawyer-->
+        <section class="section">
+            <img src="media/sk_thumb.png" class="thumbnail" />
+            <div class="content">
+
+                <h1>
+                    &nbsp;Historian/Parliamentarian - Sawyer Kallestad &nbsp;
+
+                </h1>
+
+                <p>
+                    Age: 18 <br />
+                    Grade: 12 <br />
+                    Future Plans: Start his own electrician business
+                </p>
+            </div>
+        </section>
+
+        <div>
+            <br />
+        </div>
+
+        <!--Ben-->
+        <section class="section">
+            <img src="media/bg_thumb.png" class="thumbnail" />
+            <div class="content">
+
+                <h1>
+                    &nbsp;Secretary - Ben Gallei &nbsp;
+
+                </h1>
+
+                <p>
+                    Age: 16 <br />
+                    Grade: 10 <br />
+                    Future Plans: None yet
+                </p>
+            </div>
+        </section>
 
 
     </body>
