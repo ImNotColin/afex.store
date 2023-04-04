@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+
+        <title>AFEX | Supplying The Pride</title>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+        <link rel="icon" type="media/x-icon" sizes="32x32" href="media/favicon-32x32.png">
+        <link rel="icon" type="media/x-icon" sizes="16x16" href="media/favicon-16x16.png">
+        <link rel="manifest" href="media/site.webmanifest">
+
+        <meta name="description" content="Browse all your favorite products here, on the AFEX website!" />
+
+        <style>
+            /* Form styling */
+            .textbox {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                width: 80%;
+            }
+            .btn {
+                transition-duration: 0.4s;
+                border-radius: 6px;
+                font-size: 20px;
+                border: none;
+                color: black;
+                font-weight: bold;
+                padding: 10px 15px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+                .btn:hover {
+                    background-color: lightgrey;
+                    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                    cursor: pointer;
+                }
+
+            .container {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin-top: 40px;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+                .container input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                background-color: #961c14;
+                border-radius: 5px;
+            }
+
+            .container:hover input ~ .checkmark {
+                background-color: #69140e;
+            }
+
+            .container input:checked ~ .checkmark {
+                background-color: #395826;
+            }
+
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            .container input:checked ~ .checkmark:after {
+                display: block;
+            }
+
+            .container .checkmark:after {
+                left: 9px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            /* Navigation Bar */
+            .topnav {
+                background-color: #395826;
+                overflow: hidden;
+                padding: 5px;
+                text-align: center;
+            }
+                .topnav a {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 25px;
+                }
+                    .topnav a:hover {
+                        background-color: #69140e;
+                        color: lightgrey;
+                    }
+
+            .logo {
+                width: 30%;
+                height: 30%;
+                padding-bottom: 8px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+                font-weight: bold;
+                padding-top: 10px;
+            }
+
+            h2 {
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+                font-weight: bold;
+            }
+
+            .section {
+                transition: box-shadow .3s;
+                border-radius: 20px;
+                margin-left: 6%;
+                margin-right: 6%;
+                display: flex;
+                flex-direction: row;
+                font-family: sans-serif;
+                background-color: #f2f2f2;
+            }
+                .section:hover {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+
+            p {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: dimgray;
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+
+            .image {
+                width: 88%;
+                height: 50%;
+                padding: 10px;
+                border-radius: 20px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .thumbnail {
+                width: 20%;
+                height: 20%;
+                padding: 10px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <a href="index.html">
+            <img src="media/afex_logo.png" class="logo" />
+        </a>
+
+        <div class="topnav">
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="locations.html">Our Locations</a>
+            <a href="contact.html">Contact Us/Newsletter</a>
+        </div>
+
+        <br />
+        <br />
+
+        <!--Intro-->
+        <section class="section">
+            <div class="content">
+                <h2 style="font-size:40px;">
+                    &nbsp;Contact Us / Newsletter &nbsp;
+                </h2>
+                <p style="text-align:center;">
+                    Have a question/suggestion or want to sign up for our weekly newsletter? Here's the place to do it! We're always open to
+                    hearing your opinion on how we're doing, and how we can improve.
+                </p>
+            </div>
+        </section>
+
+        <div>
+            <br />
+        </div>
+
+        <section class="section">
+            <div class="content">
+                <form action="submit.html">
+
+                    <!--Name input-->
+                    <div class="row">
+                        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:black;">
+                            <strong>
+                            Name
+                            </strong>
+                        </p>
+                        <div>
+                            <input class="textbox">
+                        </div>
+                    </div>
+
+                    <!--Email input-->
+                    <div class="row">
+                        <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:black;">
+                            <strong>
+                                Email (Required if you want a response/wish to be sent our newsletter)
+                            </strong>
+                            
+                        </p>
+                        <div>
+                            <input class="textbox" type="text">
+                        </div>
+                    </div>
+
+                    <!--Newsletter checkbox-->
+                    <label class="container">
+                        <p>
+                            Yes, I would like to be sent the AFEX weekly newsletter!
+                        </p>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <br />
+                    <br />
+
+                    <!--Submit button-->
+                    <button class="btn" type="submit">Submit</button>
+
+                </form>
+
+            </div>
+        </section>
+
+
+    </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+
+        <title>AFEX | Supplying The Pride</title>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+        <link rel="icon" type="media/x-icon" sizes="32x32" href="media/favicon-32x32.png">
+        <link rel="icon" type="media/x-icon" sizes="16x16" href="media/favicon-16x16.png">
+        <link rel="manifest" href="media/site.webmanifest">
+
+        <meta name="description" content="Browse all your favorite products here, on the AFEX website!" />
+
+        <style>
+            /* Form styling */
+            .btn {
+                width: 500px;
+                transition-duration: 0.4s;
+                border-radius: 6px;
+                font-size: 20px;
+                border: none;
+                color: black;
+                font-weight: bold;
+                padding: 10px 15px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+                .btn:hover {
+                    background-color: lightgrey;
+                    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                    cursor: pointer;
+                }
+
+            .btn-wrap {
+                height: 60px;
+                position: relative;
+            }
+
+            .btn-center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+           
+            /* Navigation Bar */
+            .topnav {
+                background-color: #395826;
+                overflow: hidden;
+                padding: 5px;
+                text-align: center;
+            }
+                .topnav a {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 25px;
+                }
+                    .topnav a:hover {
+                        background-color: #69140e;
+                        color: lightgrey;
+                    }
+
+            .logo {
+                width: 30%;
+                height: 30%;
+                padding-bottom: 8px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+                font-weight: bold;
+                padding-top: 10px;
+            }
+
+            h2 {
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+                font-weight: bold;
+            }
+
+            .section {
+                transition: box-shadow .3s;
+                border-radius: 20px;
+                margin-left: 6%;
+                margin-right: 6%;
+                display: flex;
+                flex-direction: row;
+                font-family: sans-serif;
+                background-color: #f2f2f2;
+            }
+                .section:hover {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+
+            p {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: dimgray;
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <a href="index.html">
+            <img src="media/afex_logo.png" class="logo" />
+        </a>
+
+        <div class="topnav">
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="locations.html">Our Locations</a>
+            <a href="contact.html">Contact Us/Newsletter</a>
+        </div>
+
+        <br />
+        <br />
+
+        <!--Intro-->
+        <section class="section">
+            <div class="content">
+                <h2 style="font-size:40px;">
+                    &nbsp;Thank You! &nbsp;
+                </h2>
+                <p style="text-align:center;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Your input is much appreciated! If you included an email, we'll respond as soon as we can.
+                    In the meantime, look out for our newsletter (if you chose to receive it) or browse our avaliable products.
+                </p>
+            </div>
+        </section>
+
+        <div>
+            <br />
+        </div>
+
+        <div class="btn-wrap">
+            <div class="btn-center">
+                <form action="index.html">
+                    <button class="btn" type="submit">Back Home</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </body>
+</html>
