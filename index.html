@@ -2,46 +2,47 @@
 
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8" />
 
-        <title>AFEX | Supplying The Pride</title>
-        
-        <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
-        <link rel="icon" type="media/x-icon" sizes="32x32" href="media/favicon-32x32.png">
-        <link rel="icon" type="media/x-icon" sizes="16x16" href="media/favicon-16x16.png">
-        <link rel="manifest" href="media/site.webmanifest">
+    <title>AFEX | Supplying The Pride</title>
 
-        <meta name="description" content="Browse all your favorite products here, on the AFEX website!" />
+    <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+    <link rel="icon" type="media/x-icon" sizes="32x32" href="media/favicon-32x32.png">
+    <link rel="icon" type="media/x-icon" sizes="16x16" href="media/favicon-16x16.png">
+    <link rel="manifest" href="media/site.webmanifest">
 
-        <style>
-            .logo {
-                width: 15%;
-                height: 15%;
-                margin-left: 5%;
-            }
-            .video-container {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                width: 99%;
-                height: 100%; 
-                height: 100%; 
-                overflow: hidden;
-            }
+    <meta name="description" content="Browse all your favorite products here, on the AFEX website!" />
+
+    <style>
+        .logo {
+            width: 15%;
+            height: 15%;
+            margin-left: 5%;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 99%;
+            height: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
             .video-container video {
                 /* Make video to at least 100% wide and tall */
-                min-width: 100%; 
+                min-width: 100%;
             }
+
             .video-container video {
                 /* Make video to at least 100% wide and tall */
-                min-width: 100%; 
-                min-height: 100%; 
-
+                min-width: 100%;
+                min-height: 100%;
                 /* Setting width & height to auto prevents the browser from stretching or squishing the video */
                 width: auto;
                 height: auto;
-
                 /* Center the video */
                 position: absolute;
                 top: 50%;
@@ -49,330 +50,343 @@
                 transform: translate(-50%,-50%);
             }
 
-            h1 {
+        h1 {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        .image {
+            width: 88%;
+            height: 50%;
+            padding: 10px;
+            border-radius: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .parallax {
+            background-image: url("media/AFEXBck.png");
+            min-height: 800px;
+            /* The parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        @media (min-width: 1000px) {
+
+            body {
+                margin: 0px auto;
+                overflow: hidden;
+            }
+
+            .flip-card {
+                background-color: transparent;
+                width: 250px;
+                height: 150px;
+                perspective: 1000px;
+                border-radius: 10px;
+            }
+
+            .flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
                 text-align: center;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
-                font-weight: bold;
-                padding-top: 10px;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                border-radius: 10px;
             }
 
-            .image {
-                width: 88%;
-                height: 50%;
-                padding: 10px;
-                border-radius: 20px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
+            .flip-card:hover .flip-card-inner {
+                transform: rotateY(540deg);
+                border-radius: 10px;
             }
 
-            .parallax {
-                background-image: url("media/AFEXBck.png");
-                min-height: 800px;
-                /* The parallax scrolling effect */
-                background-attachment: fixed;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+            .flip-card-front, .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                border-radius: 10px;
             }
 
-
-            @media (min-width: 1000px) {
-
-                body {
-                    margin: 0px auto;
-                    overflow: hidden;
-                }
-
-                .flip-card {
-                    background-color: transparent;
-                    width: 250px;
-                    height: 150px;
-                    perspective: 1000px;
-                    border-radius: 10px;
-                }
-
-                .flip-card-inner {
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    text-align: center;
-                    transition: transform 0.6s;
-                    transform-style: preserve-3d;
-                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                    border-radius: 10px;
-                }
-
-                .flip-card:hover .flip-card-inner {
-                    transform: rotateY(540deg);
-                    border-radius: 10px;
-                }
-
-                .flip-card-front, .flip-card-back {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                    border-radius: 10px;
-                }
-
-                .flip-card-front {
-                    border-radius: 10px;
-                    background-color: #ededed;
-                    color: black;
-                }
-
-                .flip-card-back {
-                    border-radius: 10px;
-                    background-color: #ededed;
-                    color: black;
-                    transform: rotateY(180deg);
-                }
-
-                .wrapper {
-                    width: 90%;
-                    margin: auto;
-                    align-self: center;
-                }
-
-                .first {
-                    float: left;
-                    padding-left: 5%;
-                    padding-bottom: 5%;
-                }
-
-                .second {
-                    float: left;
-                    padding-left: 4%;
-                    padding-bottom: 5%;
-                }
-
-                .third {
-                    float: left;
-                    padding-left: 4%;
-                }
-
-                .fourth {
-                    float: left;
-                    padding-left: 4%;
-                }
+            .flip-card-front {
+                border-radius: 10px;
+                background-color: #ededed;
+                color: black;
             }
 
-            @media (max-width: 1000px) {
-
-                body {
-                    margin: 0px auto;
-                    
-                }
-
-                .flip-card {
-                    background-color: transparent;
-                    width: 500px;
-                    height: 150px;
-                    perspective: 1000px;
-                    border-radius: 10px;
-                }
-
-                .flip-card-inner {
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    text-align: center;
-                    transition: transform 0.6s;
-                    transform-style: preserve-3d;
-                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                    border-radius: 10px;
-                }
-
-                .flip-card:hover .flip-card-inner {
-                    transform: rotateY(540deg);
-                    border-radius: 10px;
-                }
-
-                .flip-card-front, .flip-card-back {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                    border-radius: 10px;
-                }
-
-                .flip-card-front {
-                    border-radius: 10px;
-                    background-color: #ededed;
-                    color: black;
-                }
-
-                .flip-card-back {
-                    border-radius: 10px;
-                    background-color: #ededed;
-                    color: black;
-                    transform: rotateY(180deg);
-                }
-
-                .wrapper {
-                    width: 90%;
-                    margin: auto;
-                    align-self: center;
-                }
-
-                .first {
-                    float: left;
-                    padding-left: 5%;
-                    padding-bottom: 5%;
-                }
-
-                .second {
-                    float: left;
-                    padding-left: 4%;
-                    padding-bottom: 5%;
-                }
-
-                .third {
-                    float: left;
-                    padding-left: 4%;
-                    padding-bottom: 5%;
-                }
-
-                .fourth {
-                    float: left;
-                    padding-left: 4%;
-                }
+            .flip-card-back {
+                border-radius: 10px;
+                background-color: #ededed;
+                color: black;
+                transform: rotateY(180deg);
             }
 
-            footer {
+            .wrapper {
+                width: 90%;
+                margin: auto;
+                align-self: center;
+            }
+
+            .first {
+                float: left;
+                padding-left: 5%;
+                padding-bottom: 5%;
+            }
+
+            .second {
+                float: left;
+                padding-left: 4%;
+                padding-bottom: 5%;
+            }
+
+            .third {
+                float: left;
+                padding-left: 4%;
+            }
+
+            .fourth {
+                float: left;
+                padding-left: 4%;
+            }
+        }
+
+        @media (max-width: 1000px) {
+
+            body {
+                margin: 0px auto;
+            }
+
+            .flip-card {
+                background-color: transparent;
+                width: 500px;
+                height: 150px;
+                perspective: 1000px;
+                border-radius: 10px;
+            }
+
+            .flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
                 text-align: center;
-                padding: 3px;
-                background-color: #f2f2f2;
-                color: dimgrey;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                border-radius: 10px;
             }
 
-        </style>
-
-        <script>
-
-            // This handles the intro animation
-
-            var opacity = 0;
-            var intervalID = 0;
-
-            function fadeIn() {
-                setInterval(show, 60);
+            .flip-card:hover .flip-card-inner {
+                transform: rotateY(540deg);
+                border-radius: 10px;
             }
 
-            function show() {
-                var body = document.getElementById("body");
-                opacity = Number(window.getComputedStyle(body)
-                                .getPropertyValue("opacity"));
-                if (opacity < 1) {
-                    opacity = opacity + 0.1;
-                    body.style.opacity = opacity
-                } else {
-                    clearInterval(intervalID);
-                }
+            .flip-card-front, .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                border-radius: 10px;
             }
-            setTimeout(() => {
+
+            .flip-card-front {
+                border-radius: 10px;
+                background-color: #ededed;
+                color: black;
+            }
+
+            .flip-card-back {
+                border-radius: 10px;
+                background-color: #ededed;
+                color: black;
+                transform: rotateY(180deg);
+            }
+
+            .wrapper {
+                width: 90%;
+                margin: auto;
+                align-self: center;
+            }
+
+            .first {
+                float: left;
+                padding-left: 5%;
+                padding-bottom: 5%;
+            }
+
+            .second {
+                float: left;
+                padding-left: 4%;
+                padding-bottom: 5%;
+            }
+
+            .third {
+                float: left;
+                padding-left: 4%;
+                padding-bottom: 5%;
+            }
+
+            .fourth {
+                float: left;
+                padding-left: 4%;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 5px;
+            background-color: #69140e;
+            color: white;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+            
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+
+    </style>
+
+    <script>// This handles the intro animation
+
+        var opacity = 0;
+        var intervalID = 0;
+
+        function fadeIn() {
+            setInterval(show, 60);
+        }
+
+        function show() {
+            var body = document.getElementById("body");
+            opacity = Number(window.getComputedStyle(body)
+                .getPropertyValue("opacity"));
+            if (opacity < 1) {
+                opacity = opacity + 0.1;
+                body.style.opacity = opacity
+            } else {
+                clearInterval(intervalID);
+            }
+        }
+        setTimeout(() => {
             fadeIn()
-            }   , 2400); // Delay before video fades out
+        }, 2400); // Delay before video fades out
 
-            setTimeout(() => {
+        setTimeout(() => {
             const intro = document.getElementById('intro');
             intro.style.display = 'none';
-            }   , 2400);
+        }, 2400);</script>
+</head>
 
-        </script>
-    </head>
-
-    <body>
+<body>
 
 
-        <!--Plays the video on intro-->
-        <div class="video-container" id="intro">
-            <video autoplay muted>
-                <source src="media/afexintro.mp4" type="video/mp4">
-            </video>
+    <!--Plays the video on intro-->
+    <div class="video-container" id="intro">
+        <video autoplay muted>
+            <source src="media/afexintro.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!--EVERYTHING TO FADE IN GOES HERE-->
+    <div id="body" style="opacity: 0;">
+
+        <a href="products.html">
+            <footer>
+                Looking for the hottest products in stock? Click here to view our avaliable products.
+            </footer>
+        </a>
+
+        <img src="media/AFEXbck.png" class="image">
+
+        <!--Flip cards-->
+        <div class="wrapper">
+
+            <a href="about.html">
+                <div class="first">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="media/info.png" alt="icon" style="width:120px;height:120px;padding-top:15px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <br />
+                                <h1>About Us</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="products.html">
+                <div class="second">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="media/cart.png" alt="icon" style="width:150px;height:150px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <br />
+                                <h1>Our Products</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="locations.html">
+                <div class="third">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="media/map.png" alt="icon" style="width:120px;height:120px;padding-top:15px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <br />
+                                <h1>Our Locations</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="contact.html">
+                <div class="fourth">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="media/envelope.png" alt="icon" style="width:150px;height:150px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <br />
+                                <h1 style="padding-top:0px;">Contact Us / <br /> Newsletter</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+
         </div>
 
-        <!--EVERYTHING TO FADE IN GOES HERE-->
-        <div id="body" style="opacity: 0;">
 
-            <img src="media/AFEXbck.png" class="image">
-
-            <!--Flip cards-->
-            <div class="wrapper">
-
-                <a href="about.html">
-                    <div class="first">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="media/info.png" alt="icon" style="width:120px;height:120px;padding-top:15px;">
-                                </div>
-                                <div class="flip-card-back">
-                                    <br />
-                                    <h1>About Us</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="products.html">
-                    <div class="second">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="media/cart.png" alt="icon" style="width:150px;height:150px;">
-                                </div>
-                                <div class="flip-card-back">
-                                    <br />
-                                    <h1>Our Products</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="locations.html">
-                    <div class="third">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="media/map.png" alt="icon" style="width:120px;height:120px;padding-top:15px;">
-                                </div>
-                                <div class="flip-card-back">
-                                    <br />
-                                    <h1>Our Locations</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="contact.html">
-                    <div class="fourth">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="media/envelope.png" alt="icon" style="width:150px;height:150px;">
-                                </div>
-                                <div class="flip-card-back">
-                                    <br />
-                                    <h1 style="padding-top:0px;">Contact Us / <br /> Newsletter</h1>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </a>
+    </div>
 
 
-            </div>
 
-        </div>
+</body>
 
-    </body>
+
 </html>
